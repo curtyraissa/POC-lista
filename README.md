@@ -7,12 +7,14 @@
 - [x]  Validar em tempo de execução a entrada do usuário (ou seja, usar o JOI).
 - [x]  Seguir as regras de arquitetura (routers, controllers, services, etc).
 <hr/>
+
 ## ☑️ &nbsp;Rotas
 POST: /lista
 GET: /lista
 DELETE: /lista/:id
 PUT: /lista/:id
 <hr/>
+
 ## 🚀 &nbsp;Banco de Dados
 
 CREATE TABLE shopping_list (
@@ -21,6 +23,7 @@ CREATE TABLE shopping_list (
   status TEXT NOT NULL CHECK (status IN ('pendente', 'comprado'))
 );
 <hr/>
+
 ## 🛠 &nbsp;Skills
 <div align="center">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="52" alt="node logo"  />
