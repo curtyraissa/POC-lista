@@ -9,19 +9,25 @@
 <hr/>
 
 ## ☑️ &nbsp;Rotas
-POST: /lista
-GET: /lista
-DELETE: /lista/:id
-PUT: /lista/:id
+```
+POST: /lista 
+GET: /lista 
+DELETE: /lista/:id 
+PUT: /lista/:id 
+```
+
 <hr/>
 
 ## 🚀 &nbsp;Banco de Dados
 
-CREATE TABLE shopping_list (
-  id SERIAL PRIMARY KEY,
-  nome TEXT NOT NULL,
-  status TEXT NOT NULL CHECK (status IN ('pendente', 'comprado'))
+```sql 
+CREATE TABLE shopping_list ( 
+  id SERIAL PRIMARY KEY, 
+  nome TEXT NOT NULL, 
+  status TEXT NOT NULL CHECK (status IN ('pendente', 'comprado')) 
 );
+```
+
 <hr/>
 
 ## 🛠 &nbsp;Skills
