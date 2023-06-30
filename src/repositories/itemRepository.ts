@@ -1,4 +1,4 @@
-import db from '../database/database';
+import connection from '../database/database';
 
 const itemRepository = {
 
@@ -8,7 +8,7 @@ const itemRepository = {
     const values = [item.nome, item.status];
 
     try {
-      const result = await db.connection.query(query, values);
+      const result = await connection.query(query, values);
       return result.rows[0];
     } catch (error) {
       throw new Error('Erro ao criar item na lista de compras');
@@ -21,7 +21,7 @@ const itemRepository = {
     const values = [itemId];
 
     try {
-      await db.connection.query(query, values);
+      await connection.query(query, values);
     } catch (error) {
       throw new Error('Erro ao excluir item da lista de compras');
     }
@@ -32,7 +32,7 @@ const itemRepository = {
     const query = 'SELECT * FROM shopping_list';
 
     try {
-      const result = await db.connection.query(query);
+      const result = await connection.query(query);
       return result.rows;
     } catch (error) {
       throw new Error('Erro ao obter itens da lista de compras');
@@ -45,7 +45,7 @@ const itemRepository = {
     const values = [status, itemId];
 
     try {
-      const result = await db.connection.query(query, values);
+      const result = await connection.query(query, values);
       return result.rows[0];
     } catch (error) {
       throw new Error('Erro ao atualizar status do item');

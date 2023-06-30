@@ -1,17 +1,17 @@
 import { Request, Response } from 'express';
 import itemRepository from '../repositories/itemRepository';
+import httpStatus from 'http-status';
 
 const itemController = {
   
     // Cria um novo item na lista de compras
   async create(req: Request, res: Response) {
     const { nome, status } = req.body;
-
     try {
       const item = await itemRepository.create({ nome, status });
-      res.status(201).json(item);
+      res.sendStatus(httpStatus.OK);
     } catch (error) {
-      res.status(500).json({ error: 'Erro ao criar item na lista de compras' });
+      res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
     }
   },
 
@@ -21,9 +21,9 @@ const itemController = {
 
     try {
       await itemRepository.delete(itemId);
-      res.sendStatus(204);
+      res.sendStatus(httpStatus.OK);
     } catch (error) {
-      res.status(500).json({ error: 'Erro ao excluir item da lista de compras' });
+      res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
     }
   },
 
@@ -31,9 +31,9 @@ const itemController = {
   async getAll(req: Request, res: Response) {
     try {
       const items = await itemRepository.getAll();
-      res.json(items);
+      res.status(httpStatus.OK).send(items);
     } catch (error) {
-      res.status(500).json({ error: 'Erro ao obter itens da lista de compras' });
+      res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
     }
   },
 
@@ -44,9 +44,9 @@ const itemController = {
 
     try {
       const item = await itemRepository.updateStatus(itemId, status);
-      res.json(item);
+      res.status(httpStatus.OK).send(item);
     } catch (error) {
-      res.status(500).json({ error: 'Erro ao atualizar status do item' });
+      res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 };
