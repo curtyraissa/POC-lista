@@ -1,6 +1,6 @@
 <h1 align="center">POC - Lista de Compras</h1>
 Projeto de POC (proof of concept) em TypeScript com o tema de uma lista de compras.
-<hr/>
+<br></br>
 
 ## 💻 &nbsp;Como Usar
 
