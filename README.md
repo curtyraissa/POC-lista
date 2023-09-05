@@ -34,7 +34,11 @@ Para compilar o código TypeScript em JavaScript, execute o seguinte comando:
 
 ### Rodando o projeto
 Para iniciar o servidor, execute o seguinte comando:
- - npm start
+ - npm run dev
+
+ ### Testando o projeto
+ Para testar o código, execute o seguinte comando:
+ - npm test
 
 <hr/>
 
