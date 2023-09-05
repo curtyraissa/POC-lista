@@ -2,6 +2,14 @@
 Projeto de POC (proof of concept) em TypeScript com o tema de uma lista de compras.
 <br></br>
 
+## 📝&nbsp;Sobre
+  - Configuração do TypeScript.
+  - Criação de uma API com Node.js + Express + TypeScript.
+  - Operações CRUD com persistência no banco de dados PostgreSQL.
+  - Validação em tempo de execução das entradas do usuário usando JOI.
+  - Adoção de práticas de arquitetura, incluindo roteadores, controladores, serviços, etc.
+<hr/>
+
 ## 💻 &nbsp;Como Usar
 
 ### Pré-requisitos
@@ -24,33 +32,33 @@ CREATE TABLE shopping_list (
 3. Crie o arquivo .env e configure as variáveis de ambiente necessárias, como a chave de acesso ao banco de dados.
 
 ### Instalando as Dependências
-  - git clone https://github.com/seu-usuario/POC-lista.git
-  - cd POC-lista
-  - npm install
+```json
+  git clone https://github.com/seu-usuario/POC-lista.git
+  cd POC-lista
+  npm install
+```
 
 ### Compilando o Projeto
 Para compilar o código TypeScript em JavaScript, execute o seguinte comando:
-   - npm run build
+```json
+  npm run build
+```
 
 ### Rodando o projeto
 Para iniciar o servidor, execute o seguinte comando:
- - npm run dev
+```json
+  npm run dev
+```
 
  ### Testando o projeto
  Para testar o código, execute o seguinte comando:
- - npm test
+```json
+  npm test
+```
 
 <hr/>
 
-## ✅  &nbsp;Sobre
-  - Configuração do TypeScript.
-  - Criação de uma API com Node.js + Express + TypeScript.
-  - Operações CRUD com persistência no banco de dados PostgreSQL.
-  - Validação em tempo de execução das entradas do usuário usando JOI.
-  - Adoção de práticas de arquitetura, incluindo roteadores, controladores, serviços, etc.
-<hr/>
-
-## ☑️ &nbsp;Rotas
+## ✅   &nbsp;Rotas
 - POST: /lista - Cria um novo item na lista de compras.
 - GET: /lista - Obtém todos os itens da lista de compras.
 - DELETE: /lista/:id - Exclui um item da lista de compras com base no ID.
