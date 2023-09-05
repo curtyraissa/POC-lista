@@ -4,11 +4,11 @@ Projeto de POC (proof of concept) em TypeScript com o tema de uma lista de compr
 
 ## 💻 &nbsp;Como Usar
 
-#### Pré-requisitos
+### Pré-requisitos
 
 Necessário ter o Node.js instalado na máquina, bem como um banco de dados PostgreSQL configurado e acessível.
 
-#### Configurando o Banco de Dados
+### Configurando o Banco de Dados
 
 1. Execute o seguinte comando SQL para criar a tabela de lista de compras no banco de dados:
 
@@ -23,20 +23,21 @@ CREATE TABLE shopping_list (
 
 3. Crie o arquivo .env e configure as variáveis de ambiente necessárias, como a chave de acesso ao banco de dados.
 
-#### Instalando as Dependências
+### Instalando as Dependências
   - git clone https://github.com/seu-usuario/POC-lista.git
   - cd POC-lista
   - npm install
 
-#### Compilando o Projeto
+### Compilando o Projeto
 Para compilar o código TypeScript em JavaScript, execute o seguinte comando:
    - npm run build
 
-#### Rodando o projeto
+### Rodando o projeto
 Para iniciar o servidor, execute o seguinte comando:
  - npm start
 
 <hr/>
+
 ## ✅  &nbsp;Sobre
   - Configuração do TypeScript.
   - Criação de uma API com Node.js + Express + TypeScript.
@@ -50,7 +51,6 @@ Para iniciar o servidor, execute o seguinte comando:
 - GET: /lista - Obtém todos os itens da lista de compras.
 - DELETE: /lista/:id - Exclui um item da lista de compras com base no ID.
 - PUT: /lista/:id - Atualiza o status de um item na lista de compras com base no ID.
-
 <hr/>
 
 ## 🛠 &nbsp;Tecnologias
